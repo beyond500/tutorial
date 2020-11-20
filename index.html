@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Sample</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<link rel="stylesheet" href="css/aos.css">
+<style>
+header {
+    background: url('img/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    /* height: 100%; */
+}
+h3, p {color: white; font-size: 40px;}
+h3 {margin: 10px 0 50px;}
+h3 strong {font-size: 80px; vertical-align: middle;}
+img {max-width: 100%;}
+.top_number {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 79px;
+    color: yellow;
+    font-weight: 600;
+    background-color: #333333;
+    border: 1px solid #4F4E4E;
+    border-radius: 8px;
+}
+ul {color: white;}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div class="container">
+            <img class="img-reponsive" src="img/landing_top_title_1.png" alt="">
+            <h3>samsung <strong>Galaxy Note 20</strong></h3>
+            <p>오늘 선착순 <span class="top_number" id="top_number">91</span>명 할인혜택</p>
+            <img class="img-reponsive" src="img/landing_big_hp.png" alt="">
+            <ul class="row">
+                <li class="col-4">한정수량 할인특가</li>
+                <li class="col-4">최저가보상</li>
+                <li class="col-4">사은품혜택</li>
+            </ul>
+        </div> <!-- header container end -->
+    </header>
+    <main>
+        <div class="container">
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+        </div>
+    </main>
+    <footer>
+        <div class="container"></div>
+    </footer>
+    
+</div>
+
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/countup.min.js"></script>
+
+<script>
+
+AOS.init();
+$("img[src*='cfile'][src^='http']").attr("data-aos", "animation-name"); // set each animation 
+
+
+/**
+[0] 카운트를 보여줄 ID
+[1] 시작 카운트
+[2] 종료 카운트
+[3] 소수점
+[4] 시작 ~ 종료 까지 실행 시간
+[5] 옵션
+*/
+var options = {
+    useEasing : true, 
+    useGrouping : true, 
+    separator : ',', 
+    decimal : '.', 
+    prefix : '', 
+    suffix : '' 
+};
+var demo = new CountUp("top_number", 0, 91, 0, 2.5, options);
+demo.start();
+
+
+
+</script>
+</body>
+</html>
+
